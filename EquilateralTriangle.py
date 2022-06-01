@@ -16,7 +16,7 @@ class EquilateralTriangle(Shape):
         self._sideLength = _sideLength
 
     def getArea(self) -> Double:
-        area = (self._sideLength * self._sideLength)/2
+        area = ((self._sideLength ** 2) * (math.sqrt(3)))/4
         return area
     def getPerimeter(self) -> Double:
         perimetro = self._sideLength * 3
@@ -30,7 +30,7 @@ print('--------------------------')
 print('--------------------------')
 
 eq = EquilateralTriangle('Brown')
-eq.setSideLength(20)
+eq.setSideLength(6)
 print('AREA OF EQUILATERAL TRIANGLE')
 print(eq.getArea())
 print('PERIMETER OF EQUILATERAL TRIANGLE')
