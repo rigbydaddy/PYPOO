@@ -2,21 +2,21 @@ from abc import ABC, abstractmethod
 from tokenize import Double
 
 class Shape(ABC):
-    def __init__(self, color, filled = True):
+    def __init__(self, color:str = "red", filled:bool = True):
         self._color = color
         self._filled = filled
 
-    def get_color(self):
+    def getColor(self):
         return self._color
       
-    def set_color(self, x):
-        self._color = x
+    def setColor(self, color:str):
+        self._color = color
 
     def isFilled(self):
         return self._filled
 
-    def setFilled(self, x):
-        self._filled = x
+    def setFilled(self, color:str):
+        self._filled = color
     
     @abstractmethod
     def getArea() -> Double:
@@ -27,7 +27,7 @@ class Shape(ABC):
         pass
 
     def __str__(self) -> str:
-        return f'Shape[Color = {self._color}, Filled = {self._filled}]'
+        return f'Shape[color = {self._color}, filled = {self._filled}]'
 
 
 

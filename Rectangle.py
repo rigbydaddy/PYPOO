@@ -1,37 +1,38 @@
+from tokenize import Double
 from Shape import Shape
 
 
 class Rectangle(Shape):
-    def __init__(self, color, filled, width = 1.0, length = 1.0):
+    def __init__(self, color:str, filled:bool, width:Double = 1.0, length:Double = 1.0):
         super().__init__(color, filled)
         self._width = width
         self._length = length
 
 
-    def get_width(self):
+    def getWidth(self):
         return self._width
 
         
-    def set_width(self, x):
-        self._width = x
+    def setWidth(self, width:Double):
+        self._width = width
 
-    def get_length(self):
+    def getLength(self):
         return self._width
 
         
-    def set_length(self, x):
-        self._length = x
+    def setLength(self, length:Double):
+        self._length = length
 
-    def getArea(self) -> float:
+    def getArea(self) -> Double:
         area = self._length * self._width
         return area
 
-    def getPerimeter(self) -> float:
+    def getPerimeter(self) -> Double:
         perimetro = (self._length + self._width) * 2
         return perimetro
 
     def __str__(self) -> str:
-        return f'Rectangle[{super(Rectangle, self).__str__()}, Width = {self._width}, Length = {self._length}]'
+        return f'Rectangle[{super(Rectangle, self).__str__()}, width = {self._width}, length = {self._length}]'
 
 
 print('--------------------------')

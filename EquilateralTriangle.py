@@ -5,7 +5,7 @@ from tokenize import Double
 from Shape import Shape  
 
 class EquilateralTriangle(Shape):
-    def __init__(self, color, filled=True, sideLength = 1.0):
+    def __init__(self, color:str, filled:bool = True, sideLength:Double = 1.0):
         super().__init__(color, filled)
         self._sideLength = sideLength
 
@@ -23,7 +23,7 @@ class EquilateralTriangle(Shape):
         return perimetro
     
     def __str__(self) -> str:
-        return f'Equilateral Triangle[] {super(EquilateralTriangle, self).__str__()}, Side Length = {self._sideLength}]'
+        return f'Equilateral Triangle[{super(EquilateralTriangle, self).__str__()}, side length = {self._sideLength}]'
     
 print('--------------------------')
 print('--------------------------')

@@ -5,15 +5,15 @@ from tokenize import Double
 from Shape import Shape
 
 class Circle(Shape):
-    def __init__(self, color, filled, radius = 1.0):
+    def __init__(self, color:str, filled:bool, radius:Double = 1.0):
         super().__init__(color, filled)
         self._radius = radius 
         
 
-    def get_radius(self):
+    def getRadius(self):
         return self._radius
         
-    def set_radius(self, x):
+    def setRadius(self, x):
         self._radius = x
 
     def getArea(self, radius) -> Double:
@@ -25,7 +25,7 @@ class Circle(Shape):
         return perimetro
 
     def __str__(self) -> str:
-        return f'Circle[{super(Circle, self).__str__()}, Radius = {self._radius}]'
+        return f'Circle[{super(Circle, self).__str__()}, radius = {self._radius}]'
 
 print('--------------------------')
 print('--------------------------')
